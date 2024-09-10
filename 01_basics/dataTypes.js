@@ -1,5 +1,20 @@
 "use strict" //treat all the code as it's based on the newer version of Javascript
 
+alert(3===3); //won't work in the Node. Should work in the browser engine
+
+// Always focus on the readability of the code, should be readable under all circumstances.
+
+console.log(3
+    +
+    3
+) // an example of a bad code readability-wise.
+
+// most common documentations are 1.MDN, 2.tc39.es
+
+// Datatypes
+
+// JavaScript is a dynamic language with dynamic types. Variables in JavaScript are not directly associated with any particular value type, and any variable can be assigned (and re-assigned) values of all types.
+
 // Primitive Data Types
 // These are the most basic data types in JavaScript. They are immutable which means fixed values and are stored directly in memory.
 
