@@ -15,12 +15,12 @@ console.log(3
 
 // JavaScript is a dynamic language with dynamic types. Variables in JavaScript are not directly associated with any particular value type, and any variable can be assigned (and re-assigned) values of all types.
 
-// Primitive Data Types
+// Primitive Data Types (Value type)
 // These are the most basic data types in JavaScript. They are immutable which means fixed values and are stored directly in memory.
 
 // 1. Number: Represents both integer and floating-point numbers.
 let age = 25; // Example of an integer
-let price = 99.99; // Example of a floating-point number
+let price = 99.99; // Example of a floating-point number. Floats are included in Number as well
 
 // Maximum value for Number
 let maxNumber = Number.MAX_VALUE; // 1.7976931348623157e+308
@@ -75,7 +75,7 @@ let person = {
 // 2. Array: An ordered list of values.
 let fruits = ["apple", "banana", "cherry"]; // Array of strings
 
-// 3. Function: A block of code designed to perform a particular task.
+// 3. Function: A block of code designed to perform a particular task. Complete datatype is Object Function. But shown as function in the console.
 function greet(name) {
     return `Hello, ${name}!`;
 }

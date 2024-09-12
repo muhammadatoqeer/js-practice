@@ -1,3 +1,5 @@
+// JavaScript is a dynamic language and not static, which means that variables can hold values of different types during runtime
+
 // A script is basically a set of instructions that you give to a computer to perform.
 
 // Each step of the script is known as a statement/instruction. Each instruction usually starts on a new line (Good Code readability practices).
