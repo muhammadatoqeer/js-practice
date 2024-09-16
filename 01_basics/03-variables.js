@@ -9,7 +9,7 @@ let accountState; //All the above variables were initialized (i.e. assigned a va
 
 
 
-// accountID = 10; TypeError: Assignment to constant variable. Beacuse re-assignment is not possible to a const variable.
+accountID = 10; //TypeError: Assignment to constant variable. Beacuse re-assignment is not possible to a const variable.
 
 console.log(accountID); 
 
