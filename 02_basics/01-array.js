@@ -209,14 +209,14 @@ console.log(arrCopy.includes(3)); // Output: true (3 is in the array)
 console.log(arrCopy.includes(6)); // Output: false (6 is not in the array)
 
 // 7. Array.prototype.keys() - Returns a new Array Iterator object that contains the keys (indexes) for each index in the array.
-let keys = Array.from(arrCopy.keys());
-console.log(keys); // Output: [0, 1, 2, 3, 4] (array of indexes)
+let keys1 = Array.from(arrCopy.keys());
+console.log(keys1); // Output: [0, 1, 2, 3, 4] (array of indexes)
 
 // 8. Array.prototype.values() - Returns a new Array Iterator object that contains the values for each index in the array.
-let values = Array.from(arrCopy.values());
-console.log(values); // Output: [4, 5, 3, 4, 5] (array of values)
+let values1 = Array.from(arrCopy.values());
+console.log(values1); // Output: [4, 5, 3, 4, 5] (array of values)
 
 // 9. Array.prototype.entries() - Returns a new Array Iterator object that contains key/value pairs for each index in the array.
 // Example already covered: iterates over key/value pairs.
-let entries = Array.from(arrCopy.entries());
-console.log(entries); // Output: [[0, 4], [1, 5], [2, 3], [3, 4], [4, 5]]
+let entries1 = Array.from(arrCopy.entries());
+console.log(entries1); // Output: [[0, 4], [1, 5], [2, 3], [3, 4], [4, 5]]
