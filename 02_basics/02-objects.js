@@ -244,3 +244,13 @@ console.log(num.valueOf()); // Output: 123
 // These methods enhance the functionality of JavaScript objects and are important for managing object properties and inheritance in a more controlled manner.
 
 
+
+/* ---------------------DESTRUCTURING AN OBJECT----------------- */
+
+// Destructuring in programming refers to a convenient syntax that allows you to extract values from arrays or properties from objects and assign them to variables in a more concise and readable manner. 
+
+const person = { name: "John", age: 30 };
+const { name: n, age: a } /*{ objectKey : alternative name for that key}]*/ = person; //name of the object
+
+console.log(n); // Output: John
+console.log(a);  // Output: 30
