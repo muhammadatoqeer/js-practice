@@ -56,3 +56,41 @@ greeting('Muhammad') //This is going to EXECUTE the function but won't return an
 
 console.log(greeting()) //Output: Sam just logged in!
 console.log(greeting('Muhammad')) // Output:Muhammad just logged in!
+
+
+
+
+//Rest operator/spread operation '...' (3 dots). Used when we're not sure how many number of arguments are going to be passed. Then we use the REST '...' operator (Which is known as the spread operator otherwise). This operator takes in all the parameters and stores them in an array named after the three dots. e.g. '...args' will store the parameters in a 'args' named array etc. 
+
+function calculateCartPrice(...params) {
+    return params
+}
+
+console.log(calculateCartPrice(50, 40, 1, 2, 12)); //Output: [50,40,1,2,12];
+
+
+//Objects and arrays in function
+
+const obj1 = {
+    firstName: 'Muhammad',
+    "lastName": 'Toqeer',
+    age: 23,
+    gender: "M",
+    location: 'Dubai',
+    isLoggedIn: false,
+}
+
+function objectsInFunctions(object) {
+    return `Fullname: ${object.firstName} + ${object.lastName} \n Age: ${object.age}` // \n is the 'new line' character.
+}
+
+console.log(objectsInFunctions(obj1)); //Output: Fullname: Muhammad + Toqeer 
+//         Age: 23 years old.
+
+let array = [1, 10, 13, 2, 78];
+
+function printSecondElement(arr) {
+    return arr[1];
+}
+
+console.log(printSecondElement(array)); //Output: 10
