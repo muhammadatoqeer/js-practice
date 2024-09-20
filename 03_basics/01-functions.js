@@ -96,7 +96,7 @@ function printSecondElement(arr) {
 console.log(printSecondElement(array)); //Output: 10
 
 
-//+++++++++++++++++++++++  NOTES ++++++++++++++++++++++++++++++
+//+++++++++++++++++++++++   NOTES  ++++++++++++++++++++++++++++++
 
 
 // JavaScript Function Declarations and Their Differences
