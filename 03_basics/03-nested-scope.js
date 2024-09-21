@@ -76,4 +76,6 @@ const addFour = function (number) {  //this is a function expression (storing in
     return number + 2;
 }
 
+//
+
 
