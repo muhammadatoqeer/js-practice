@@ -15,6 +15,8 @@ xyz(); //This is a normal function call
 
     //Step 3: Add a semi-colon ; at the of teh () call to add a stop to execution otherwise two back to back added IIFEs will cause problems.
 
+    //Same for Arrow functions as well
+
 
 
     // ++++++++++++++++++++ Full Notes +++++++++++++++++++
