@@ -36,7 +36,8 @@ const person = { name: "John", age: 30 };
 /*
 2. `for...in` Loop:
 --------------------------------------------------
-- The `for...in` loop is used to iterate over **enumerable properties** of an object.
+- The `for...in` loop is used to iterate over **enumerable properties** of an object. (Enumeration in JavaScript refers to the process of iterating over the properties (keys) of an object. When you enumerate an object, you go through each of its enumerable properties, including keys that belong directly to the object)
+
 - It iterates over **keys** (property names), not values, and it can be used on plain objects.
 
 Syntax:
