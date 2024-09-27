@@ -45,4 +45,33 @@ if (condition1 || condition2) { //|| denotes OR. At least one of the  conditions
 
 }
 
-//24:30 =>26
+//Switch statement is needed when we have to check multiple cases of a value. (Compact version of if...else if)
+
+switch (key) { //key is the 
+    case value:
+
+        break;
+
+    default:
+        break;
+}
+
+const month = 3;
+
+switch (month) {
+    case 1:
+        console.log('Month is January') //Shift + Alt + Down arrow to copy
+        break;
+    case 2:
+        console.log('Month is February')
+        break;
+    case 3:
+        console.log('Month is March')
+        break;
+
+    default: //like an 'else'. Executes when nothing else if left.
+        console.log('Month is March')
+        break;
+}
+
+//Break keyword exits the execution of the code after the case has matched. if no break keyword then the program keeps on executing despite the case matching (except Default). Interview question.
