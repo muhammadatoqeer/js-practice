@@ -159,5 +159,5 @@ Common Errors to Avoid:
 - Using `for...of` on objects results in a `TypeError` because objects are not iterable.
 - Using `for...in` on Maps or Sets will not iterate through their key-value pairs.
 - Using `forEach()` on a non-array-like structure will result in an error.
-*/
+*/ 
 
