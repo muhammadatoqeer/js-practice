@@ -114,7 +114,7 @@ Syntax:
     });
 
 Use Case:
-- Use `forEach()` for arrays when you need to access each element or perform operations on each element.
+- Use `forEach()` for arrays when you need to access each element or perform operations on each element. Returns nothing
 
 Example:
 */
