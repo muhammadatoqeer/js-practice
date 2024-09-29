@@ -128,7 +128,6 @@ setOne.addOne(2);
 setOne.add(1); // Duplicate values are ignored
 // typeof setOne => Object
 
-
 console.log(typeof undefined) //should return undefined;
 console.log(typeof null) //should return OBJECT. Interview Question.
 console.log(typeof Infinity) //Number
