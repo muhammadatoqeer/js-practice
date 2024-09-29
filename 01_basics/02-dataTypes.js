@@ -128,6 +128,9 @@ setOne.addOne(2);
 setOne.add(1); // Duplicate values are ignored
 // typeof setOne => Object
 
+
+//typeof any arrow function will also return an object
+
 console.log(typeof undefined) //should return undefined;
 console.log(typeof null) //should return OBJECT. Interview Question.
 console.log(typeof Infinity) //Number
