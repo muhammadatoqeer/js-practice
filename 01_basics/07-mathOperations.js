@@ -124,3 +124,11 @@ console.log(`Min: ${Math.min(10, 20, 30)}`); // Output: 10
 console.log(`Sine: ${Math.sin(Math.PI / 2)}`); // Output: 1 (sine of 90 degrees)
 console.log(`Cosine: ${Math.cos(0)}`); // Output: 1 (cosine of 0 degrees)
 console.log(`Tangent: ${Math.tan(Math.PI / 4)}`); // Output: 1 (tangent of 45 degrees)
+
+
+// Arithmetic in JavaScript does not raise errors in cases of overflow, underflow, or division by zero. When the result of a numeric operation is larger than the largest representable number (overflow), the result is a special infinity value, Infinity.
+
+Infinity // A positive number too big to represent
+Number.POSITIVE_INFINITY // Same value
+1 / 0 // => Infinity
+Number.MAX_VALUE * 2 // => Infinity; overflow

@@ -1,5 +1,14 @@
+//Variable is basically a type of an identifier. Identifiers are used to name variables, functions, constants, classes etc. Every word except the 'reserved keywords' can be used as an identifie. Language restricts the usage of reserved words as identifier names.
 
-//declaring a variable reserves (allocates) a space in memory. 
+/*
+
+A JavaScript identifier must begin with a letter, an underscore (_), or a dollar sign ($). Subsequent characters can be letters, digits, underscores, or dollar signs. (Digits are not allowed as the first character so that JavaScript can easily distinguish
+identifiers from numbers.)
+
+*/
+
+
+//Variables act as placeholders for values so that the program can execute these value at different stages during the execution of the program. Declaring a variable reserves (allocates) a space in memory. 
 
 const accountID = 569; //const is used to declare a constant variable that cannot be changed later.
 let accountEmail = 'xyz@abc.com' 
