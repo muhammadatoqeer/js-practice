@@ -77,12 +77,16 @@ let isLoggedIn = false; // Boolean false
 // 5. Undefined: A variable that has been declared but not assigned a value.
 let uninitialized; // No value assigned
 console.log(uninitialized); // Output: undefined
+// typeof uninitialized => undefined
+
 
 // 6. Null: Represents the intentional absence of any object value.
 let emptyValue = null; // Represents "no value" or "nothing"
+// typeof null => Object
 
 // 7. Symbol: A unique and immutable value, often used as a key for object properties. used to introduce uniqueness to the program. 
 let uniqueId = Symbol('id'); // Creating a new unique Symbol
+// typeof uniqueId => symbol
 
 // Non-Primitive (Reference) Data Types
 // These types are mutable and hold references to memory locations where the data is stored.

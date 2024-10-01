@@ -12,6 +12,7 @@ console.log(`Hi, My name is ${name} and I have ${repoCount} GitHub repositories`
 //Declaring Strings using the object method (constructor);
 
 const myName = new String('Muhammad');
+//typeof myName = object
 
 //Even though you're using the String constructor to create a string object, the behavior of immutability still applies because of how JavaScript handles strings, regardless of whether they are primitive strings or string objects. String objects are wrappers around primitive strings: They provide additional functionality but do not alter the immutability of the string content.
 
@@ -23,6 +24,7 @@ let upperCaseString = originalString.toUpperCase(); // Creates a new string in t
 console.log(originalString); // Output: "hello" (original string remains unchanged)
 console.log(upperCaseString); // Output: "HELLO" (new string is returned)
 
+// Escape characters in string \n => newline
 
 
 
@@ -31,30 +33,30 @@ console.log(upperCaseString); // Output: "HELLO" (new string is returned)
 let str = "Hello, World!";
 let str2 = "JavaScript";
 
-// at() - Returns the character at the specified index (can be negative).
+// at() - RETURNS the character at the specified index (can be negative). These string indexes begin from 0 (like arrays)
 console.log(str.at(7)); // Output: W (character at index 7)
 
-// charAt() - Returns the character at a specified index.
+// charAt() - RETURNS the character at a specified index. Same output as at() only difference is negative indices 
 console.log(str.charAt(1)); // Output: e (character at index 1)
 
-// charCodeAt() - Returns the Unicode of the character at a specified index. Has code points from 0 to 65535 (Basic Multilingual Plane. Emojis and stuff not supported
+// charCodeAt() - RETURNS the Unicode of the character at a specified index. Has code points from 0 to 65535 (Basic Multilingual Plane. Emojis and stuff not supported
 console.log(str.charCodeAt(1)); // Output: 101 (Unicode of 'e')
 
-// codePointAt() - The codePointAt() method of String values returns a non-negative integer that is the Unicode code point value of the character starting at the given index. Supercharged version of charCodeAt() which can handle emojis and stuff.
+// codePointAt() - The codePointAt() method of String values RETURNS a non-negative integer that is the Unicode code point value of the character starting at the given index. Supercharged version of charCodeAt() which can handle emojis and stuff.
 console.log(str.codePointAt(1)); // Output: 101 (code point of 'e')
 
-// concat() - Joins two or more strings.
-console.log(str.concat(" ", str2)); // Output: Hello, World! JavaScript (concatenates strings)
+// concat() - Joins two or more strings into a calling string.
+console.log(str.concat(" ", str2)); // Output: Hello, World! JavaScript (concatenates strings). str here is the 'calling string'. And concat() concatenates to the calling string. Can concatenate multiple strings in one call.
 
-// endsWith() - Checks if a string ends with a specified substring.
+// endsWith() - Checks if a string (calling string) ends with a specified substring.
 console.log(str.endsWith("!")); // Output: true (string ends with '!')
 
 
 
 // includes() - Checks if a string contains a specified substring.
-console.log(str.includes("World")); // Output: true (string contains 'World')
+console.log(str.includes("World")); // Output: true (string contains 'World').
 
-// indexOf() - Returns the first index of a specified substring.
+// indexOf() - Returns the first index of a specified substring/letter.
 console.log(str.indexOf("o")); // Output: 4 (first occurrence of 'o')
 
 // isWellFormed() - Checks if a string is well-formed (part of ECMAScript proposals).

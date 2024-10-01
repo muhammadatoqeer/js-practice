@@ -34,6 +34,14 @@ Boolean(); //special cases include empty string '' or "" which returns false, re
 String();
 
 
+console.log(1 + 1 + +'1') //'21'
+
+console.log(1 + '1') //11
+console.log('1' + 1 + 1) // 111
+
+//If string first then whole expression becomes string (line 40), if first integer then perform integer calculation and then concatenated that to the string (line 37)
+
+
 
 
 
