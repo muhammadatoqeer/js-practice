@@ -33,11 +33,36 @@ console.log(upperCaseString); // Output: "HELLO" (new string is returned)
 let str = "Hello, World!";
 let str2 = "JavaScript";
 
+
+//+++++++++++++++++++++++++++++++++ INDEX PRINTING METHODS ++++++++++++++++++++++++++++++++
+
 // at() - RETURNS the character at the specified index (can be negative). These string indexes begin from 0 (like arrays)
 console.log(str.at(7)); // Output: W (character at index 7)
 
 // charAt() - RETURNS the character at a specified index. Same output as at() only difference is negative indices 
 console.log(str.charAt(1)); // Output: e (character at index 1)
+
+// indexOf() - Returns the first index of a specified substring/letter.
+console.log(str.indexOf("o")); // Output: 4 (first occurrence of 'o')
+
+// lastIndexOf() - Returns the last index of a specified substring.
+console.log(str.lastIndexOf("o")); // Output: 8 (last occurrence of 'o')
+
+// search() - Searches for a match between a string and a regular expression.
+console.log(str.search("World")); // Output: 7 (index of 'World')
+
+//+++++++++++++++++++++++++++++++++ BOOLEAN STRING METHODS ++++++++++++++++++++++++++++++++
+
+// endsWith() - Checks if a string (calling string) ends with a specified substring.
+console.log(str.endsWith("!")); // Output: true (string ends with '!')
+
+// includes() - Checks if a string contains a specified substring.
+console.log(str.includes("World")); // Output: true (string contains 'World').
+
+// startsWith() - Checks if a string starts with a specified substring.
+console.log(str.startsWith("Hello")); // Output: true (string starts with 'Hello')
+
+//+++++++++++++++++++++++++++++++++ CHARACTERCODE METHODS ++++++++++++++++++++++++++++++++
 
 // charCodeAt() - RETURNS the Unicode of the character at a specified index. Has code points from 0 to 65535 (Basic Multilingual Plane. Emojis and stuff not supported
 console.log(str.charCodeAt(1)); // Output: 101 (Unicode of 'e')
@@ -48,22 +73,14 @@ console.log(str.codePointAt(1)); // Output: 101 (code point of 'e')
 // concat() - Joins two or more strings into a calling string.
 console.log(str.concat(" ", str2)); // Output: Hello, World! JavaScript (concatenates strings). str here is the 'calling string'. And concat() concatenates to the calling string. Can concatenate multiple strings in one call.
 
-// endsWith() - Checks if a string (calling string) ends with a specified substring.
-console.log(str.endsWith("!")); // Output: true (string ends with '!')
 
 
 
-// includes() - Checks if a string contains a specified substring.
-console.log(str.includes("World")); // Output: true (string contains 'World').
 
-// indexOf() - Returns the first index of a specified substring/letter.
-console.log(str.indexOf("o")); // Output: 4 (first occurrence of 'o')
+
 
 // isWellFormed() - Checks if a string is well-formed (part of ECMAScript proposals).
 // console.log(str.isWellFormed()); // Commented out because it's not standard yet
-
-// lastIndexOf() - Returns the last index of a specified substring.
-console.log(str.lastIndexOf("o")); // Output: 8 (last occurrence of 'o')
 
 // length - Returns the length of the string.
 console.log(str.length); // Output: 13 (length of the string)
@@ -95,8 +112,6 @@ console.log(str.replace("World", "JS")); // Output: Hello, JS! (replaces 'World'
 // replaceAll() - Replaces all occurrences of a specified value with another value.
 console.log(str.replaceAll("o", "O")); // Output: HellO, WOrld! (replaces all 'o' with 'O')
 
-// search() - Searches for a match between a string and a regular expression.
-console.log(str.search("World")); // Output: 7 (index of 'World')
 
 // slice() - Extracts a section of a string and returns it as a new string.
 console.log(str.slice(7, 12)); // Output: World (extracts from index 7 to 12)
@@ -104,8 +119,6 @@ console.log(str.slice(7, 12)); // Output: World (extracts from index 7 to 12)
 // split() - Splits a string into an array of substrings.
 console.log(str.split(", ")); // Output: [ 'Hello', 'World!' ] (splits by ', ')
 
-// startsWith() - Checks if a string starts with a specified substring.
-console.log(str.startsWith("Hello")); // Output: true (string starts with 'Hello')
 
 // substr() - Returns a part of the string from a start index with a specified length.
 console.log(str.substr(7, 5)); // Output: World (extracts 5 characters from index 7)
@@ -139,6 +152,22 @@ console.log("  Hello, World!  ".trimStart()); // Output: "Hello, World!  " (trim
 
 // valueOf() - Returns the primitive value of a String object.
 console.log(str.valueOf()); // Output: Hello, World! (returns primitive string value)
+
+// 1. Using locale with `toLocaleString()` for number formatting
+const number = 1234567.89;
+console.log(number.toLocaleString("en-US")); // Output: "1,234,567.89" (US English format)
+console.log(number.toLocaleString("de-DE")); // Output: "1.234.567,89" (German format)
+
+// 2. Using `toLocaleUpperCase()` and `toLocaleLowerCase()` for regional character case
+const city = "istanbul";
+console.log(city.toLocaleUpperCase("en-US")); // Output: "ISTANBUL" (Standard uppercase)
+console.log(city.toLocaleUpperCase("tr-TR")); // Output: "İSTANBUL" (Turkish locale changes the dot)
+
+// 3. Using `localeCompare()` for sorting strings based on locale
+const names = ["Álvaro", "Alberto", "Andrea"];
+names.sort((a, b) => a.localeCompare(b, "es-ES")); // Spanish sorting rules
+console.log(names); // Output: ["Alberto", "Álvaro", "Andrea"] (Accented Á is sorted differently)
+
 
 // [Symbol.iterator] - Returns an iterator for the characters of the string.
 for (let char of str) {
