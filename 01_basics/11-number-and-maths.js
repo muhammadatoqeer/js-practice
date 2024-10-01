@@ -158,6 +158,8 @@ let max = 15;
 
 console.log(Math.floor(Math.random() * (max - min + 1) + min))
 
+parseInt('String') //NaN. Converts a string into a number
+
 //Important Number Object properties
 
 // The following Number properties are defined in ES6

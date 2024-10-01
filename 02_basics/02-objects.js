@@ -6,7 +6,7 @@ const mySym = Symbol('Key1')
 
 const obj1 = {              //Literal Declaration
     firstName: 'Muhammad',
-    "lastName": 'Toqeer',       // a key-value pair. Main feature of objects.
+    "lastName": 'Toqeer',   // a key-value pair. Main feature of objects.
     age: 23,                // The keys are also passed as strings (to access)
     gender: "M",
     location: 'Dubai',

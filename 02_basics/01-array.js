@@ -1,9 +1,9 @@
 //shallow copies (referece point same in memory) 
 
 const array = [1, 2, 3, 4, 5, 6] //basic declaration
-const newArray = new Array(1, 2, 3, 4, 5) //constructor declaration. if you only add 1 number in the constructor then that defines the length of the array 
+const newArray = new Array(1, 2, 3, 4, 5) //constructor declaration. if you only add single parameter in the constructor then that defines the length of the array 
 
-console.log(array.isArray());
+console.log(array.isArray()); // => Checking for array
 
 
 

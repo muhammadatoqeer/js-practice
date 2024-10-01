@@ -25,6 +25,7 @@ function /* => the keyword*/ printMyName /* => funcion name. if there's no name 
 }
 
 printMyName(); //Function call with (). without () only function reference.
+console.log(printMyName) //[Function: printMyName]
 
 function addTwoNumbers(a, b /* a, b are PARAMETERS i.e. variable added during the declaration of the function*/) {
     console.log(a + b);
