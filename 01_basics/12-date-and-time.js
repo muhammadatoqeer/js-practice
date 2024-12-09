@@ -1,3 +1,16 @@
+//MDN Syntax
+new Date()
+new Date(value)
+new Date(dateString)
+new Date(dateObject)
+
+new Date(year, monthIndex)
+new Date(year, monthIndex, day)
+new Date(year, monthIndex, day, hours)
+new Date(year, monthIndex, day, hours, minutes)
+new Date(year, monthIndex, day, hours, minutes, seconds)
+new Date(year, monthIndex, day, hours, minutes, seconds, milliseconds)
+
 // JavaScript Date Object - Comprehensive Guide
 
 // Creating a Date Object

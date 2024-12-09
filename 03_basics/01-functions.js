@@ -82,10 +82,10 @@ const obj1 = {
 }
 
 function objectsInFunctions(object) {
-    return `Fullname: ${object.firstName} + ${object.lastName} \n Age: ${object.age}` // \n is the 'new line' character.
+    return `Fullname: ${object.firstName} ${object.lastName} \n Age: ${object.age}` // \n is the 'new line' character.
 }
 
-console.log(objectsInFunctions(obj1)); //Output: Fullname: Muhammad + Toqeer 
+console.log(objectsInFunctions(obj1)); //Output: Fullname: Muhammad Toqeer 
 //         Age: 23 years old.
 
 let array = [1, 10, 13, 2, 78];

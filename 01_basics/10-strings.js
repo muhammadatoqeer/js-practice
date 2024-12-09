@@ -34,7 +34,7 @@ let str = "Hello, World!";
 let str2 = "JavaScript";
 
 
-//+++++++++++++++++++++++++++++++++ INDEX PRINTING METHODS ++++++++++++++++++++++++++++++++
+//+++++++++++++++++++++++++++++ INDEX PRINTING METHODS ++++++++++++++++++++++++
 
 // at() - RETURNS the character at the specified index (can be negative). These string indexes begin from 0 (like arrays)
 console.log(str.at(7)); // Output: W (character at index 7)
@@ -51,7 +51,7 @@ console.log(str.lastIndexOf("o")); // Output: 8 (last occurrence of 'o')
 // search() - Searches for a match between a string and a regular expression.
 console.log(str.search("World")); // Output: 7 (index of 'World')
 
-//+++++++++++++++++++++++++++++++++ BOOLEAN STRING METHODS ++++++++++++++++++++++++++++++++
+//+++++++++++++++++++++++++++ BOOLEAN STRING METHODS ++++++++++++++++++++++++++
 
 // endsWith() - Checks if a string (calling string) ends with a specified substring.
 console.log(str.endsWith("!")); // Output: true (string ends with '!')
