@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            font-family: 'Courier New', Courier, monospace;
+            font-weight: 600;
+            font-size: 50px;
+        }
+
+        body {
+            background-color: #1a1a1a;
+            display: flex;
+            height: 100vh;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .s1 {
+            color: rgb(255, 0, 0);
+        }
+
+        .s2 {
+            color: aqua;
+            display: none;
+        }
+    </style>
+</head>
+
+<body>
+    <span class="s1">This is the outer
+        <span class="s2"> and this is the inner</span> level
+        <span class="s3">this is level 3</span>
+    </span>
+</body>
+
+<script>
+
+    // let textHTML = document.getElementsByClassName('s1')[0].innerHTML;
+    // console.log(textHTML); //Output: This is the outer<span class="s2"> and this is the inner</span> level
+
+    // let textIn = document.getElementsByClassName('s1')[0].innerText;
+    // console.log(textIn); //Output: This is the outer level
+
+    // let textC = document.getElementsByClassName('s1')[0].textContent;
+    // console.log(textC); //Output: This is the outer and this is the inner level
+
+    let spanElement = document.querySelector('.s3');
+    console.log(spanElement.parentNode);
+
+
+</script>
+
+</html>
