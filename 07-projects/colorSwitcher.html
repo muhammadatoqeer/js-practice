@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            width: 100vw;
+            background-color: #111;
+            font-family: 'Courier New', Courier, monospace;
+            font-weight: 600;
+            color: #fff;
+            flex-direction: column;
+        }
+
+        .container {
+            display: flex;
+            align-items: space-between;
+            justify-content: space-between;
+            width: 800px;
+        }
+
+        .style1,
+        .style2,
+        .style3,
+        .style4 {
+            display: flex;
+            width: 150px;
+            height: 150px;
+            border: 2px solid #fff;
+            color: #fff;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+        }
+
+        .style1 {
+            background-color: red;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        .style2 {
+            background-color: green;
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+        }
+
+        .style3 {
+            background-color: rgb(0, 132, 255);
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        }
+
+        .style4 {
+            background-color: rgb(208, 0, 255);
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        }
+
+        .nav {
+            padding: 10px 40px;
+            background-color: transparent;
+            border: 2px solid rgb(255, 255, 255);
+            font-family: 'Courier New', Courier, monospace;
+            font-weight: 600;
+            cursor: pointer;
+            font-size: 1rem;
+            color: rgb(255, 255, 255);
+            text-decoration: none;
+            margin-bottom: 100px;
+        }
+    </style>
+</head>
+
+<body id='body'>
+    <header>
+        <a href="/07-projects/bmiCalculator.html" class='nav'>BMI Calculator</a>
+        <a href="/07-projects/digitalclock.html" class='nav'>Digital Clock</a>
+    </header>
+    <h3 id="h3">Use the following buttons to change the body styles!</h3>
+    <div class="container">
+        <button class="style1" onclick="toRed()" id="red"> Style 1</button>
+        <button class="style2" onclick="toGreen()" id="green"> Style 2</button>
+        <button class="style3" onclick="toBlue()" id="blue"> Style 3</button>
+        <button class="style4" onclick="toPink()" id="pink"> Style 4</button>
+    </div>
+</body>
+<script>
+    // let body = document.getElementById('body');
+    //method 1 - individual functions
+    // function toRed() {
+    //     body.style.backgroundColor = 'red';
+    // }
+    // function toGreen() {
+    //     body.style.backgroundColor = 'green'
+
+    // }
+    // function toBlue() {
+    //     body.style.backgroundColor = 'rgb(0, 132, 255)';
+    // }
+    // function toPink() {
+    //     body.style.backgroundColor = 'rgb(208, 0, 255)';
+    // }
+
+    //method 2 - event listener
+
+    let button = document.querySelectorAll('button'); //will return a nodelist
+    let body = document.body;
+
+    button.forEach(function (button) {
+        button.addEventListener('click', function (e) {
+            if (e.target.id === 'red') {
+                body.style.backgroundColor = e.target.id;
+            } else if (e.target.id === 'green') {
+                body.style.backgroundColor = e.target.id;
+            } else if (e.target.id === 'blue') {
+                body.style.backgroundColor = 'rgb(0, 132, 255)';
+            } else if (e.target.id === 'pink') {
+                body.style.backgroundColor = 'rgb(208, 0, 255)';
+            }
+        })
+    })
+
+</script>
+
+</html>

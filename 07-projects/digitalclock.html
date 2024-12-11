@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            width: 100vw;
+            background-color: #4946ff;
+            font-family: 'Courier New', Courier, monospace;
+            font-weight: 600;
+            font-size: 2rem;
+            color: #fff;
+            flex-direction: column;
+        }
+
+        .container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            width: 800px;
+            margin: 100px;
+        }
+
+        .nav {
+            padding: 10px 40px;
+            background-color: transparent;
+            border: 2px solid #fff;
+            font-family: 'Courier New', Courier, monospace;
+            font-weight: 600;
+            cursor: pointer;
+            font-size: 1rem;
+            color: white;
+            text-decoration: none;
+        }
+
+        #clock {
+            background-color: orange;
+            height: 50px;
+            width: 250px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 5px;
+
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <a href="/07-projects/bmiCalculator.html" class='nav'>BMI Calculator</a>
+        <a href="/07-projects/colorSwitcher.html" class='nav'>Color Switcher</a>
+    </header>
+    <div class="container">
+        <div id="banner">Your local time</div>
+        <div id="clock"></div>
+    </div>
+
+</body>
+<script>
+    let clock = document.getElementById('clock');
+
+
+    setInterval(() => { //new method set interval. re-runs same code after a specific interval (time in milliseconds)
+        let date = new Date();
+        clock.innerHTML = date.toLocaleTimeString();
+    }, 1000);
+
+</script>
+
+</html>
