@@ -67,82 +67,84 @@
 
 </body>
 <script>
-    // let num = Math.floor(Math.random() * 100 + 1);
-    // let form = document.querySelector('form');
-    // let results = document.querySelector('#results');
-    // let prevGuesses = document.querySelector('#prev-guesses');
-    // let remAttempts = document.querySelector('#remaining-attempts');
-    // let guess = Number(document.getElementById('input').value);
+            let num = Math.floor(Math.random() * 100 + 1);
+            let form = document.querySelector('form');
+            let results = document.querySelector('#results');
+            let prevGuesses = document.querySelector('#prev-guesses');
+            let remAttempts = document.querySelector('#remaining-attempts');
 
-    // form.addEventListener('submit', function (e) {
-    //     for (let index = 0; index < 10; index++) {
-    //         if (guess === '' || guess < 0 || isNaN(guess)) {
-    //             results.innerHTML = `Please give a valid guess`;
-    //         } else if (guess === num) {
-    //             results.innerHTML = `That's correct!`;
-    //         } else if (guess > num) {
-    //             results.innerHTML = `${guess} is too high!`;
-    //             prevGuesses.innerHTML += `${guess},`;
-    //             remAttempts.innerHTML = `${10 - index}`;
-    //         } else {
-    //             results.innerHTML = `${guess} is too low!`; prevGuesses.innerHTML += `${guess},`;
-    //             remAttempts.innerHTML = `${10 - index}`;
-    //         }
+            form.addEventListener('submit', function (e) {
+            e.preventDefault();
+            let guess = Number(document.getElementById('input').value);
 
-    //         if (index === 9) {
-    //             break;
-    //         }
-    //     }
+            for (let index = 0; index < 10; index++) {
+                if (guess === '' || guess < 0 || isNaN(guess)) {
+                    results.innerHTML = `Please give a valid guess`;
+                } else if (guess === num) {
+                    results.innerHTML = `That's correct!`;
+                } else if (guess > num) {
+                    results.innerHTML = `${guess} is too high!`;
+                    prevGuesses.innerHTML += `${guess},`;
+                    remAttempts.innerHTML = `${10 - index}`;
+                } else {
+                    results.innerHTML = `${guess} is too low!`; prevGuesses.innerHTML += `${guess},`;
+                    remAttempts.innerHTML = `${10 - index}`;
+                }
 
-    // })
-    let num = Math.floor(Math.random() * 100 + 1); // Generate the random number
-    let attempts = 10; // Track remaining attempts
-    let form = document.querySelector('form');
-    let results = document.querySelector('#results');
-    let prevGuesses = document.querySelector('#prev-guesses');
-    let remAttempts = document.querySelector('#remaining-attempts');
+                if (index === 9) {
+                    break;
+                }
+            }
 
-    form.addEventListener('submit', function (e) {
-        e.preventDefault(); // Prevent form submission refresh
+        })
+            // let num = Math.floor(Math.random() * 100 + 1); // Generate the random number
+            // let attempts = 10; // Track remaining attempts
+            // let form = document.querySelector('form');
+            // let results = document.querySelector('#results');
+            // let prevGuesses = document.querySelector('#prev-guesses');
+            // let remAttempts = document.querySelector('#remaining-attempts');
 
-        // Get the user's guess
-        let guess = Number(document.getElementById('input').value);
+            // form.addEventListener('submit', function (e) {
+            //     e.preventDefault(); // Prevent form submission refresh
 
-        // Validate the input
-        if (isNaN(guess) || guess <= 0 || guess > 100) {
-            results.innerHTML = `Please give a valid guess between 1 and 100.`;
-            return; // Exit early on invalid input
-        }
+            //     // Get the user's guess
+            //     let guess = Number(document.getElementById('input').value);
 
-        // Reduce attempts and update display
-        attempts--;
-        remAttempts.innerHTML = `Remaining Attempts: ${attempts}`;
+            //     // Validate the input
+            //     if (isNaN(guess) || guess <= 0 || guess > 100) {
+            //         results.innerHTML = `Please give a valid guess between 1 and 100.`;
+            //         return; // Exit early on invalid input
+            //     }
 
-        // Check the guess
-        if (guess === num) {
-            results.innerHTML = `🎉 That's correct! You guessed the number ${num}!`;
-            disableGame();
-        } else if (guess > num) {
-            results.innerHTML = `${guess} is too high!`;
-        } else {
-            results.innerHTML = `${guess} is too low!`;
-        }
+            //     // Reduce attempts and update display
+            //     attempts--;
+            //     remAttempts.innerHTML = `Remaining Attempts: ${attempts}`;
 
-        // Add guess to previous guesses
-        prevGuesses.innerHTML += `${guess}, `;
+            //     // Check the guess
+            //     if (guess === num) {
+            //         results.innerHTML = `🎉 That's correct! You guessed the number ${num}!`;
+            //         disableGame();
+            //     } else if (guess > num) {
+            //         results.innerHTML = `${guess} is too high!`;
+            //     } else {
+            //         results.innerHTML = `${guess} is too low!`;
+            //     }
 
-        // End game logic
-        if (attempts === 0) {
-            results.innerHTML = `Game over! The correct number was ${num}.`;
-            disableGame();
-        }
-    });
+            //     // Add guess to previous guesses
+            //     prevGuesses.innerHTML += `${guess}, `;
 
-    // Function to disable further input after game ends
-    function disableGame() {
-        document.getElementById('input').disabled = true;
-        form.querySelector('input[type=submit]').disabled = true;
-    }
+            //     // End game logic
+            //     if (attempts === 0) {
+            //         results.innerHTML = `Game over! The correct number was ${num}.`;
+            //         disableGame();
+            //     }
+            // });
+
+            // // Function to disable further input after game ends
+            // function disableGame() {
+            //     document.getElementById('input').disabled = true;
+            //     form.querySelector('input[type=submit]').disabled = true;
+            // }
 
 </script>
 
