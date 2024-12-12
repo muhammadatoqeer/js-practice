@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Async practice</title>
+</head>
+
+<body>
+    <h1>Hello</h1>
+    <button id="start">Start</button>
+    <button id="stop">Stop</button>
+</body>
+
+<script>
+
+    //try 1---------------------------------
+
+    // let timestamp = function () {
+    //     console.log(`${Date.now()}`);
+    // }
+    // let starter = document.getElementById('start');
+    // let stopper = document.getElementById('stop');
+
+    // let SI = setInterval(timestamp, 1000); //The main problem in your code is that setInterval and clearInterval are being executed prematurely (during initialization) instead of being properly tied to button clicks
+    // let CI = clearInterval(setInterval(timestamp, 1000));
+
+    // stopper.addEventListener('click', CI)
+
+    // starter.addEventListener('click', SI)
+
+    //try 2++++++++++++++++++
+
+    // let timestamp = function () {
+    //     console.log(${Date.now()});
+    // }
+    // let starter = document.getElementById('start');
+    // let stopper = document.getElementById('stop');
+
+    // stopper.addEventListener('click', clearInterval(setInterval(timestamp, 1000))) // **ISSUE** You are invoking setInterval directly when assigning it to the click event listeners (setInterval(timestamp, 1000)). This immediately starts the interval instead of assigning the function to run when the button is clicked.
+
+    // starter.addEventListener('click', setInterval(timestamp, 1000)) //FUNCTION EXECUTION VS PASSING AS A CALLBACK
+
+    // starter.addEventListener('click', setInterval); // WRONG (no arguments)
+    // starter.addEventListener('click', setInterval(timestamp, 1000)); // WRONG (immediate execution)
+    // starter.addEventListener('click', function () {
+    //     setInterval(timestamp, 1000); // Correct
+    // });
+
+
+
+    // CHATGPT TRY+++++++++++++++++++++++++
+
+    // let intervalId = null; // To store the interval ID
+
+    // // Function to log the timestamp
+    // let timestamp = function () {
+    //     console.log(`${Date.now()}`);
+    // };
+
+    // let starter = document.getElementById('start');
+    // let stopper = document.getElementById('stop');
+
+    // // Start button functionality
+    // starter.addEventListener('click', function () {
+    //     if (!intervalId) { // Prevent multiple intervals from being created
+    //         intervalId = setInterval(timestamp, 1000);
+    //     }
+    // });
+
+    // // Stop button functionality
+    // stopper.addEventListener('click', function () {
+    //     if (intervalId) {
+    //         clearInterval(intervalId); // Clear the interval
+    //         intervalId = null; // Reset the interval ID
+    //     }
+    // });
+
+
+    // my final try
+
+    let interval_ID = null;
+    let timestamp = () => console.log(`${Date.now()}`);
+    let starter = document.getElementById('start');
+    let stopper = document.getElementById('stop');
+
+    starter.addEventListener('click', function () {
+        interval_ID = setInterval(timestamp, 1000);
+    })
+
+    stopper.addEventListener('click', function () {
+        clearInterval(interval_ID);
+    })
+
+</script>
+
+</html>

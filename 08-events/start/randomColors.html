@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Random Colors</title>
+    <style>
+        body {
+            background-color: #111;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            flex-direction: column;
+            height: 100vh;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Press on the start button to randomly change the colors of the body</h1>
+    <div class="buttons">
+        <button id="start">Start</button>
+        <button id="stop">Stop</button>
+    </div>
+
+</body>
+
+<script>
+    //Math.floor(Math.random() * (max - min + 1) + min)
+
+    function colorGenerator() {
+        let random1 = Math.floor(Math.random() * 256);
+        let random2 = Math.floor(Math.random() * 256);
+        let random3 = Math.floor(Math.random() * 256);
+
+        let finalString = `#${random1.toString(16)}${random2.toString(16)}${random3.toString(16)}`
+        return finalString;
+    }
+
+    function interSet() {
+        setInterval(colorGenerator, 1000);
+    }
+
+
+    function colorChange() {
+        return document.body.style.backgroundColor = colorGenerator();
+    }
+
+    setInterval(colorChange, 1000);
+</script>
+
+</html>
