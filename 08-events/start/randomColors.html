@@ -28,27 +28,36 @@
 </body>
 
 <script>
-    //Math.floor(Math.random() * (max - min + 1) + min)
+            let intervalId = null; // To store the interval ID
+            let starter = document.getElementById('start');
+            let stopper = document.getElementById('stop');
 
-    function colorGenerator() {
-        let random1 = Math.floor(Math.random() * 256);
-        let random2 = Math.floor(Math.random() * 256);
-        let random3 = Math.floor(Math.random() * 256);
+            // Function to generate a random hex color and change the body's background color
+            let changeColor = () => {
+                let hex = '0123456789ABCDEF';
+                let hexcode = '#';
+                for (let index = 0; index < 6; index++) {
+                    let rand = Math.floor(Math.random() * 16);
+                    hexcode += hex[rand];
+                }
+                document.body.style.backgroundColor = hexcode;
+            };
 
-        let finalString = `#${random1.toString(16)}${random2.toString(16)}${random3.toString(16)}`
-        return finalString;
-    }
+            // Start button functionality
+            starter.addEventListener('click', function () {
+                if (!intervalId) { /* Prevent multiple intervals from being created. The if (!intervalId) condition ensures that a new interval is only created if one isn't already running.
+        Problem Without This Check: If you press the Start button multiple times without stopping, multiple intervals will be created. Each interval would independently call the changeColor function, leading to overlapping calls and unexpected behavior (e.g., multiple background color changes every second). */
+                    intervalId = setInterval(changeColor, 1000);
+                }
+            });
 
-    function interSet() {
-        setInterval(colorGenerator, 1000);
-    }
-
-
-    function colorChange() {
-        return document.body.style.backgroundColor = colorGenerator();
-    }
-
-    setInterval(colorChange, 1000);
+            // Stop button functionality
+            stopper.addEventListener('click', function () {
+                if (intervalId) {
+                    clearInterval(intervalId); // Stop the interval
+                    intervalId = null; // Reset the interval ID
+                }
+            });
 </script>
 
 </html>

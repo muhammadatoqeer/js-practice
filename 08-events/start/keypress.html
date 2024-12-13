@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Key Press</title>
+    <style>
+        body {
+            display: flex;
+            background-color: #111;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            color: white;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Press down any key and see the magic!</h1>
+</body>
+<script>
+    let heading = document.querySelector('h1')
+    window.addEventListener('keydown', function (e) {
+        heading.innerHTML = `${e.key} was pressed!`
+        if (e.key === ' ') {
+            heading.innerHTML = `Space Key was pressed!`
+        }
+    })
+</script>
+
+</html>

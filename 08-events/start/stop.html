@@ -86,11 +86,18 @@
     let stopper = document.getElementById('stop');
 
     starter.addEventListener('click', function () {
-        interval_ID = setInterval(timestamp, 1000);
+        if (!interval_ID) {
+            interval_ID = setInterval(timestamp, 1000);
+        }
+        
     })
 
     stopper.addEventListener('click', function () {
-        clearInterval(interval_ID);
+        if (interval_ID) {
+            clearInterval(interval_ID);
+            interval_ID = null;
+        }
+            
     })
 
 </script>
