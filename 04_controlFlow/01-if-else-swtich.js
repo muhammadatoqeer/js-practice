@@ -70,7 +70,7 @@ switch (month) {
         break;
 
     default: //like an 'else'. Executes when nothing else if left.
-        console.log('Month is March')
+        console.log('Invalid Month')
         break;
 }
 
