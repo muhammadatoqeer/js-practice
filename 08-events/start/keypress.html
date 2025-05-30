@@ -28,6 +28,10 @@
         if (e.key === ' ') {
             heading.innerHTML = `Space Key was pressed!`
         }
+        if (e.key === 'F12') {
+            e.preventDefault();
+            heading.innerHTML = `F12 was pressed!`
+        }
     })
 </script>
 

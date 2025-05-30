@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Centered Paragraph</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #111;
+            color: aliceblue;
+        }
+
+        p {
+            font-size: 1.5em;
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <p class="paragraph">This is a centered paragraph.</p>
+</body>
+<script>
+    let text = document.querySelector('.paragraph').innerHTML;
+    let newText = '';
+    window.addEventListener('keydown', function (e) {
+        for (let index = 0; index < text.length; index++) {
+            if (e.key === text[index]) {
+            }
+
+        }
+    })
+
+</script>
+
+</html>
