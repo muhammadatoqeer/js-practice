@@ -24,7 +24,7 @@ function /* => the keyword*/ printMyName /* => funcion name. if there's no name 
     console.log('D');
 }
 
-printMyName(); //Function call with (). without () only function reference.
+printMyName(); //Function call with (). without () only function reference. Function calls are executed instantly but reference doesn't.
 console.log(printMyName) //[Function: printMyName]
 
 function addTwoNumbers(a, b /* a, b are PARAMETERS i.e. variable added during the declaration of the function*/) {
@@ -35,13 +35,13 @@ addTwoNumbers(3, 4) //3 and 4 here are ARGUMENTS (The actual values passed).
 
 //We can save this function's value in a variable as well. E.g.
 
-const result = addTwoNums(3, 5); //logically result should be equal to 8 but it's gonna return undefined. Here we understand the concept of RETURN keyword
+const result = addTwoNumbers(3, 5); //logically result should be equal to 8 but it's gonna return undefined. Here we understand the concept of RETURN keyword
 
 function addTwoNumbers(a, b /* a, b are PARAMETERS i.e. variable added during the declaration of the function*/) {
     return a + b; //returning a value from function is one thing and
     //printing a value using console.log() is another thing and the function always exits after the return statement
 
-    console.log('After return statement!') //this will not print because return statement has already forced the function to quit
+    console.log('After return statement!') //this will not print because return statement has already forced the function to quit. (Unreachable code)
 }
 
 //console.log() just prints to the console; it doesn’t return anything.
@@ -138,10 +138,10 @@ console.log(sayHi()); // Output: Hi!
 
 /* 
 Key Feature:
-- **Not Hoisted**: You cannot call a function expression before it is defined.
+- **Not Hoisted**: You cannot call a function expression before it is defined. You'll get a 'Reference Error'
 */
 
-// console.log(sayBye()); // Error: Cannot access 'sayBye' before initialization
+// console.log(sayBye()); // Error: Cannot access 'sayBye' before initialization. Reference Error
 const sayBye = function () {
     return "Goodbye!";
 };
@@ -179,6 +179,21 @@ const arrowExample = {
 };
 console.log(arrowExample.regularFunc()); // Output: This is a regular function: Arrow Function
 console.log(arrowExample.arrowFunc());   // Output: This is an arrow function: undefined
+
+// In arrow functions, if you omit the curly braces {} and write a single expression, the result of that expression is automatically returned—this is called an implicit return.
+// Regular function declarations and function expressions always require the return keyword to return a value.
+
+// Arrow function with implicit return
+const add1 = (a, b) => a + b; // returns a + b
+
+// Arrow function with explicit return
+const multiply1 = (a, b) => { return a * b; };
+
+// Regular function (no implicit return)
+function addRegular(a, b) {
+  a + b; // does NOT return anything
+  // must use: return a + b;
+}
 
 
 /* 
