@@ -30,19 +30,19 @@ false == '' //true
 
 */
 
-//Nullish Coalescing Operator (??) logical operator : null and undefined. Basically a safety check for null/undefined value
+//Nullish Coalescing Operator (??) logical operator : null and undefined. Basically a safety check for null/undefined value.The nullish coalescing operator (??) moves to the right-hand side only if the left-hand side is null or undefined — not the other falsy values like 0, "" (empty string), or false.
 
 const val1 = 5 ?? 10
 console.log(val1); //5
 
 const val2 = undefined ?? 10
-console.log(val1); //10
+console.log(val2); //10
 
 const val3 = null ?? 10
-console.log(val1); //10
+console.log(val3); //10
 
 const val4 = null ?? 10 ?? 20 //picks up the first non-null/und value
-console.log(val1); //10
+console.log(val4); //10
 
 //Ternary Operator (shorthand for if...else)
 
